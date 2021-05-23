@@ -101,7 +101,7 @@ func mainHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "<h1>%s</h1>", "All Files")
 	for _, file := range files {
 		title := getTitleOfFile.FindStringSubmatch(file.Name())
-		fmt.Fprintf(w, "<a href=\"/view/%s\">%s</a><br>", title[1], title[1])
+		fmt.Fprintf(w, "<a href=\"/view/%s\">%s</a>%s<br>", title[1], title[1], "TEsting")
 	}
 }
 
